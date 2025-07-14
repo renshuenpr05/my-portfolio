@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Shawn</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><a href="portfolio_main.html#home">Shawn</a></h1>
+                    <p class="tagline">Creative Professional</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="portfolio_main.html#home">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Portfolio</h2>
+                <p>A collection of my best work</p>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web-development">Web Development</button>
+                <button class="filter-btn" data-filter="ui-ux-design">UI/UX Design</button>
+                <button class="filter-btn" data-filter="graphic-design">Graphic Design</button>
+                <button class="filter-btn" data-filter="game-project">Game Project</button>
+                <button class="filter-btn" data-filter="multimedia-school-project">Multimedia/School Project</button>
+                <button class="filter-btn" data-filter="personal-projects">Personal Projects</button>
+                <button class="filter-btn" data-filter="freelance-work">Freelance Work</button>
+                <button class="filter-btn" data-filter="codding-experiments">Codding Experiments</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web-development ui-ux-design">
+                    <div class="portfolio-image">
+                        <img src="img/travel_web_over.png" alt="Web Development, UI/UX Design">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Travel Web Overhaul</h3>
+                                <p>Responsive travel website with modern UI/UX design.</p>
+                                <a href="#" class="portfolio-link" data-full="img/travel_web_over.png"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="graphic-design">
+                    <div class="portfolio-image">
+                        <img src="img/DIP_Museum.jpg" alt="Graphic Design Project">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Museum Poster Design</h3>
+                                <p>Cultural-themed layout for tourism and ticket promotion.</p>
+                                <a href="#" class="portfolio-link" data-full="img/DIP_Museum.jpg"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="multimedia-school-project">
+                    <div class="portfolio-image">
+                        <img src="img/school_management.png" alt="Multimedia/School Project">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>School Management System</h3>
+                                <p>Admin dashboard for managing users, courses, and enrollments.</p>
+                                <a href="#" class="portfolio-link" data-full="img/school_management.png"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Shawn</h3>
+                    <p>Creative Professional</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="portfolio_main.html#home">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/chiew-ren-shuen-84ab95341/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://my.jobstreet.com/profile/me"><i class="fab fa-facebook"></i></a>
+                    <a href="http://github.com/renshuenpr05"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/renshuen_05/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shawn. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="portfolio-modal" id="portfolioModal">
+        <div class="portfolio-modal-content">
+            <img src="" alt="Full Preview" class="portfolio-modal-img" id="portfolioModalImg">
+            <button class="portfolio-modal-close" id="portfolioModalClose" title="Close">&times;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
