@@ -957,3 +957,58 @@ html {
 .portfolio-modal-close:hover {
     background: #d35400;
 }
+
+@media (max-width: 768px) {
+    .portfolio-filter {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 0.7rem;
+        padding-bottom: 0.5rem;
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    .portfolio-filter .filter-btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+    .blog-filter {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 0.7rem;
+        padding-bottom: 0.5rem;
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    .blog-filter .filter-btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+}
+
+/* 美化 portfolio-filter 横向滚动条 */
+.portfolio-filter::-webkit-scrollbar {
+    height: 4px;
+}
+.portfolio-filter::-webkit-scrollbar-thumb {
+    background: #e67e22;
+    border-radius: 2px;
+}
+.portfolio-filter::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* 美化 blog-filter 横向滚动条 */
+.blog-filter::-webkit-scrollbar {
+    height: 4px;
+}
+.blog-filter::-webkit-scrollbar-thumb {
+    background: #e67e22;
+    border-radius: 2px;
+}
+.blog-filter::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
