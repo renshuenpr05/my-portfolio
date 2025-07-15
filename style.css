@@ -792,6 +792,20 @@ body {
         flex-direction: column;
         gap: 0.3rem;
     }
+    .skill-tags {
+        gap: 0.3rem;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .skill-tag {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.7rem;
+        max-width: 95vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        box-sizing: border-box;
+    }
 }
 
 /* Smooth Scrolling */
