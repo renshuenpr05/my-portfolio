@@ -77,7 +77,7 @@ function initMobileMenu() {
 
 // Portfolio filter functionality
 function initPortfolioFilter() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    const filterButtons = document.querySelectorAll('.portfolio-filter .filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     
     filterButtons.forEach(button => {
@@ -110,25 +110,38 @@ function initPortfolioFilter() {
     });
 }
 
+
 // Blog 分类筛选功能
-const blogFilterBtns = document.querySelectorAll('.blog-filter .filter-btn');
-const blogCards = document.querySelectorAll('.blog-card');
+// Blog Filter Logic
+const blogFilterBtns = document.querySelectorAll(".blog-filter .filter-btn");
+const blogCards = document.querySelectorAll(".blog-card");
 
 blogFilterBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-        // 移除所有按钮的active
-        blogFilterBtns.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        const filter = this.getAttribute('data-filter');
-        blogCards.forEach(card => {
-            if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                card.style.display = '';
-            } else {
-                card.style.display = 'none';
-            }
-        });
+  btn.addEventListener("click", () => {
+    const filterValue = btn.getAttribute("data-filter");
+
+    blogFilterBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    blogCards.forEach(card => {
+      const category = card.getAttribute("data-category");
+
+      // First hide all
+      card.classList.remove('show');
+      card.style.display = "none";
+
+      // Then show matching ones with animation
+      if (filterValue === "all" || category === filterValue) {
+        card.style.display = "block";
+        setTimeout(() => {
+          card.classList.add('show');
+        }, 10); // small delay to trigger CSS transition
+      }
     });
+  });
 });
+
+
 
 // Scroll animations
 function initScrollAnimations() {
